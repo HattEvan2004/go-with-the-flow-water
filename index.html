@@ -206,8 +206,11 @@
   .area h2{font-size:clamp(1.9rem,3.4vw,2.8rem);margin:16px 0 16px}
   .area p{color:var(--muted);font-size:1.06rem;margin-bottom:24px}
   .towns{display:flex;flex-wrap:wrap;gap:10px}
-  .town{background:#fff;border:1px solid var(--line);border-radius:999px;padding:9px 17px;font-weight:500;font-size:.92rem;display:flex;align-items:center;gap:8px;box-shadow:var(--shadow-sm)}
-  .town svg{width:15px;height:15px;color:var(--green)}
+  .town{background:#fff;border:1px solid var(--line);border-radius:999px;padding:9px 17px;font-weight:500;font-size:.92rem;font-family:inherit;color:var(--ink);display:flex;align-items:center;gap:8px;box-shadow:var(--shadow-sm);cursor:pointer;transition:transform .2s var(--ease),box-shadow .2s,border-color .2s,background .2s,color .2s}
+  .town svg{width:15px;height:15px;color:var(--green);transition:color .2s}
+  .town:hover{transform:translateY(-2px);box-shadow:var(--shadow);border-color:var(--green)}
+  .town.active{background:var(--grad);color:#fff;border-color:transparent}
+  .town.active svg{color:#fff}
   .area-map{position:relative;border-radius:26px;overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow);background:var(--grad-soft);aspect-ratio:4/3.4}
   .area-map iframe{position:absolute;inset:0;width:100%;height:100%;border:0;display:block}
 
@@ -519,19 +522,20 @@
       <h2>Proudly serving Lunenburg County</h2>
       <p>From the harbour towns to the back roads, we deliver across Lunenburg County and the surrounding South Shore communities. If you're nearby and not listed, just ask — we likely cover you too.</p>
       <div class="towns">
-        <span class="town"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2C8 7 6 11 6 14a6 6 0 0 0 12 0c0-3-2-7-6-12Z"/></svg>Bridgewater</span>
-        <span class="town"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2C8 7 6 11 6 14a6 6 0 0 0 12 0c0-3-2-7-6-12Z"/></svg>Lunenburg</span>
-        <span class="town"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2C8 7 6 11 6 14a6 6 0 0 0 12 0c0-3-2-7-6-12Z"/></svg>Mahone Bay</span>
-        <span class="town"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2C8 7 6 11 6 14a6 6 0 0 0 12 0c0-3-2-7-6-12Z"/></svg>Chester</span>
-        <span class="town"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2C8 7 6 11 6 14a6 6 0 0 0 12 0c0-3-2-7-6-12Z"/></svg>New Germany</span>
-        <span class="town"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2C8 7 6 11 6 14a6 6 0 0 0 12 0c0-3-2-7-6-12Z"/></svg>Blockhouse</span>
-        <span class="town"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2C8 7 6 11 6 14a6 6 0 0 0 12 0c0-3-2-7-6-12Z"/></svg>Western Shore</span>
-        <span class="town"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2C8 7 6 11 6 14a6 6 0 0 0 12 0c0-3-2-7-6-12Z"/></svg>Hebbville</span>
-        <span class="town" style="background:var(--grad-soft);font-weight:600">+ surrounding areas</span>
+        <button type="button" class="town" data-q="Bridgewater, Nova Scotia" data-z="13"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2C8 7 6 11 6 14a6 6 0 0 0 12 0c0-3-2-7-6-12Z"/></svg>Bridgewater</button>
+        <button type="button" class="town" data-q="Lunenburg, Nova Scotia" data-z="13"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2C8 7 6 11 6 14a6 6 0 0 0 12 0c0-3-2-7-6-12Z"/></svg>Lunenburg</button>
+        <button type="button" class="town" data-q="Mahone Bay, Nova Scotia" data-z="14"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2C8 7 6 11 6 14a6 6 0 0 0 12 0c0-3-2-7-6-12Z"/></svg>Mahone Bay</button>
+        <button type="button" class="town" data-q="Chester, Nova Scotia" data-z="13"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2C8 7 6 11 6 14a6 6 0 0 0 12 0c0-3-2-7-6-12Z"/></svg>Chester</button>
+        <button type="button" class="town" data-q="New Germany, Nova Scotia" data-z="13"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2C8 7 6 11 6 14a6 6 0 0 0 12 0c0-3-2-7-6-12Z"/></svg>New Germany</button>
+        <button type="button" class="town" data-q="Blockhouse, Nova Scotia" data-z="14"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2C8 7 6 11 6 14a6 6 0 0 0 12 0c0-3-2-7-6-12Z"/></svg>Blockhouse</button>
+        <button type="button" class="town" data-q="Western Shore, Nova Scotia" data-z="14"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2C8 7 6 11 6 14a6 6 0 0 0 12 0c0-3-2-7-6-12Z"/></svg>Western Shore</button>
+        <button type="button" class="town" data-q="Hebbville, Nova Scotia" data-z="14"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2C8 7 6 11 6 14a6 6 0 0 0 12 0c0-3-2-7-6-12Z"/></svg>Hebbville</button>
+        <button type="button" class="town active" data-q="Lunenburg County, Nova Scotia" data-z="9" aria-pressed="true">View whole county</button>
       </div>
     </div>
     <div class="area-map reveal">
       <iframe
+        id="areaMap"
         title="Go With The Flow Water Delivery service area — Lunenburg County, Nova Scotia"
         src="https://maps.google.com/maps?q=Lunenburg%20County%2C%20Nova%20Scotia&z=9&output=embed"
         loading="lazy"
@@ -680,6 +684,18 @@
 </div>
 
 <script>
+  // Service-area map: clicking a town recenters the embedded map
+  const areaMap = document.getElementById('areaMap');
+  const townBtns = document.querySelectorAll('.town');
+  townBtns.forEach(btn => btn.addEventListener('click', () => {
+    const q = btn.getAttribute('data-q');
+    const z = btn.getAttribute('data-z') || 12;
+    areaMap.src = 'https://maps.google.com/maps?q=' + encodeURIComponent(q) + '&z=' + z + '&output=embed';
+    townBtns.forEach(b => { b.classList.remove('active'); b.setAttribute('aria-pressed','false'); });
+    btn.classList.add('active');
+    btn.setAttribute('aria-pressed','true');
+  }));
+
   document.getElementById('year').textContent = new Date().getFullYear();
 
   const header = document.getElementById('header');
