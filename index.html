@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Go With The Flow Water Delivery | Bulk Water Delivery in Lunenburg County</title>
+<meta name="description" content="Reliable bulk water delivery across Lunenburg County, NS. We fill cisterns, pools, hot tubs, and wells with clean potable water at competitive rates — scheduled service and after-hours emergency delivery. Call (902) 212-1296." />
+<meta property="og:title" content="Go With The Flow Water Delivery — Lunenburg County" />
+<meta property="og:description" content="Clean, potable bulk water delivery for cisterns, pools, hot tubs, and wells across Lunenburg County, NS. Scheduled & emergency service." />
+<meta property="og:type" content="website" />
+<meta property="og:image" content="assets/truck.jpg" />
+<link rel="icon" href="assets/logo.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700;12..96,800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --blue:#1F4E94;
+    --blue-deep:#163A6E;
+    --blue-night:#0C2247;
+    --green:#3F873B;
+    --green-deep:#256029;
+    --sky:#5EA3DA;
+    --sky-soft:#E7F2FB;
+    --mint:#EEF6EE;
+    --paper:#F6FAF6;
+    --ink:#112019;
+    --muted:#566761;
+    --line:#E2EAE3;
+    --white:#fff;
+    --grad:linear-gradient(135deg,var(--blue) 0%, #2C6A6E 52%, var(--green) 100%);
+    --grad-soft:linear-gradient(135deg,var(--sky-soft),var(--mint));
+    --shadow-sm:0 2px 10px rgba(17,32,25,.06);
+    --shadow:0 18px 40px -18px rgba(22,58,110,.28);
+    --shadow-lg:0 30px 70px -28px rgba(12,34,71,.45);
+    --radius:22px;
+    --radius-sm:14px;
+    --maxw:1180px;
+    --ease:cubic-bezier(.22,.61,.36,1);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth;overflow-x:clip}
+  body{
+    font-family:'Inter',system-ui,-apple-system,sans-serif;
+    color:var(--ink);
+    background:var(--paper);
+    line-height:1.62;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:clip;
+  }
+  h1,h2,h3,h4{font-family:'Bricolage Grotesque','Inter',sans-serif;line-height:1.05;letter-spacing:-.02em;font-weight:700}
+  a{color:inherit;text-decoration:none}
+  img{max-width:100%;display:block}
+  .wrap{width:100%;max-width:var(--maxw);margin:0 auto;padding:0 24px}
+  .eyebrow{
+    display:inline-flex;align-items:center;gap:9px;
+    font-family:'Inter',sans-serif;font-weight:600;font-size:.78rem;
+    letter-spacing:.16em;text-transform:uppercase;color:var(--green-deep);
+  }
+  .eyebrow::before{content:"";width:26px;height:2px;border-radius:2px;background:var(--grad)}
+
+  /* ---------- Buttons ---------- */
+  .btn{
+    --bg:var(--grad);
+    display:inline-flex;align-items:center;justify-content:center;gap:10px;
+    font-family:'Inter',sans-serif;font-weight:600;font-size:1rem;
+    padding:15px 26px;border-radius:999px;border:0;cursor:pointer;
+    color:#fff;background:var(--bg);background-size:160% 160%;
+    box-shadow:0 14px 28px -12px rgba(31,78,148,.7);
+    transition:transform .25s var(--ease), box-shadow .25s var(--ease), background-position .5s var(--ease);
+    white-space:nowrap;
+  }
+  .btn:hover{transform:translateY(-2px);background-position:100% 100%;box-shadow:0 20px 36px -12px rgba(31,78,148,.7)}
+  .btn:active{transform:translateY(0)}
+  .btn svg{width:19px;height:19px}
+  .btn-ghost{background:#fff;color:var(--blue);box-shadow:inset 0 0 0 1.6px var(--line),var(--shadow-sm)}
+  .btn-ghost:hover{box-shadow:inset 0 0 0 1.6px var(--blue),var(--shadow)}
+  .btn-amber{--bg:linear-gradient(135deg,#F0A41E,#E8761B);box-shadow:0 14px 28px -12px rgba(232,118,27,.7)}
+  .btn-white{background:#fff;color:var(--blue-deep);box-shadow:0 14px 30px -12px rgba(0,0,0,.4)}
+  .btn-lg{padding:18px 32px;font-size:1.06rem}
+  :focus-visible{outline:3px solid var(--sky);outline-offset:3px;border-radius:6px}
+
+  /* ---------- Header ---------- */
+  header{position:fixed;top:0;left:0;right:0;z-index:60;transition:background .3s var(--ease), box-shadow .3s var(--ease), padding .3s var(--ease);padding:14px 0}
+  header.scrolled{background:rgba(246,250,246,.86);backdrop-filter:blur(14px);box-shadow:0 1px 0 var(--line),0 10px 30px -22px rgba(17,32,25,.5);padding:8px 0}
+  .nav{display:flex;align-items:center;justify-content:space-between;gap:18px}
+  .brand{display:flex;align-items:center;gap:12px;font-family:'Bricolage Grotesque',sans-serif;font-weight:700}
+  .brand-chip{width:54px;height:54px;border-radius:15px;background:#fff;display:grid;place-items:center;padding:5px;box-shadow:var(--shadow-sm);flex:0 0 auto;transition:width .3s var(--ease),height .3s var(--ease)}
+  header.scrolled .brand-chip{width:46px;height:46px}
+  .brand-chip img{width:100%;height:100%;object-fit:contain}
+  .brand-name{display:flex;flex-direction:column;line-height:1.05}
+  .brand-name b{font-size:1.06rem;color:var(--ink);letter-spacing:-.01em}
+  .brand-name span{font-size:.7rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--green-deep);font-family:'Inter',sans-serif}
+  .nav-links{display:flex;align-items:center;gap:30px}
+  .nav-links a{font-weight:500;font-size:.96rem;color:var(--ink);position:relative;padding:4px 0}
+  .nav-links a::after{content:"";position:absolute;left:0;bottom:-2px;height:2px;width:0;background:var(--grad);border-radius:2px;transition:width .28s var(--ease)}
+  .nav-links a:hover::after{width:100%}
+  .nav-cta{display:flex;align-items:center;gap:12px}
+  .hamburger{display:none;width:46px;height:46px;border-radius:12px;border:1.6px solid var(--line);background:#fff;cursor:pointer;align-items:center;justify-content:center;flex-direction:column;gap:5px}
+  .hamburger span{width:20px;height:2px;background:var(--ink);border-radius:2px;transition:.3s var(--ease)}
+  .hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+  .hamburger.open span:nth-child(2){opacity:0}
+  .hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+  .mobile-menu{position:fixed;inset:0 0 0 auto;width:min(82vw,340px);z-index:55;background:#fff;box-shadow:var(--shadow-lg);transform:translateX(100%);transition:transform .4s var(--ease);padding:96px 28px 32px;display:flex;flex-direction:column;gap:6px}
+  .mobile-menu.open{transform:translateX(0)}
+  .mobile-menu a{padding:15px 8px;font-size:1.1rem;font-weight:600;border-bottom:1px solid var(--line)}
+  .mobile-menu .btn{margin-top:18px}
+  .overlay{position:fixed;inset:0;background:rgba(12,34,71,.4);backdrop-filter:blur(2px);opacity:0;visibility:hidden;transition:.3s;z-index:54}
+  .overlay.open{opacity:1;visibility:visible}
+
+  /* ---------- Hero ---------- */
+  .hero{position:relative;padding:150px 0 0;background:
+      radial-gradient(120% 90% at 88% -10%, var(--sky-soft) 0%, transparent 55%),
+      radial-gradient(80% 70% at -5% 20%, var(--mint) 0%, transparent 50%),
+      var(--paper);overflow:hidden}
+  .hero-grid{display:grid;grid-template-columns:1.02fr .98fr;gap:54px;align-items:center}
+  .hero-badge{display:inline-flex;align-items:center;gap:9px;background:#fff;border:1px solid var(--line);padding:7px 15px 7px 8px;border-radius:999px;font-size:.83rem;font-weight:600;color:var(--blue-deep);box-shadow:var(--shadow-sm);margin-bottom:22px}
+  .hero-badge .dot{width:9px;height:9px;border-radius:50%;background:#34B36B;box-shadow:0 0 0 4px rgba(52,179,107,.18);animation:pulse 2.4s infinite}
+  @keyframes pulse{50%{box-shadow:0 0 0 7px rgba(52,179,107,0)}}
+  .hero h1{font-size:clamp(2.5rem,5.1vw,4.1rem);font-weight:800}
+  .hero h1 .flow{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;position:relative;white-space:nowrap}
+  .hero p.lead{font-size:clamp(1.05rem,1.6vw,1.22rem);color:var(--muted);max-width:540px;margin:22px 0 30px}
+  .hero-cta{display:flex;flex-wrap:wrap;gap:14px;align-items:center}
+  .hero-trust{display:flex;flex-wrap:wrap;gap:10px 26px;margin-top:34px;padding-top:26px;border-top:1px solid var(--line)}
+  .hero-trust div{display:flex;align-items:center;gap:9px;font-size:.92rem;font-weight:500;color:var(--ink)}
+  .hero-trust svg{width:19px;height:19px;color:var(--green)}
+
+  .hero-visual{position:relative}
+  .hero-photo{position:relative;border-radius:28px;overflow:hidden;box-shadow:var(--shadow-lg);border:5px solid #fff;aspect-ratio:4/3.15}
+  .hero-photo img{width:100%;height:100%;object-fit:cover}
+  .hero-photo::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 50%, rgba(12,34,71,.20))}
+  .float-tag{position:absolute;background:#fff;border-radius:14px;padding:11px 14px;box-shadow:var(--shadow);display:flex;align-items:center;gap:10px;z-index:5;border:1px solid var(--line);font-weight:600;font-size:.9rem}
+  .float-tag .ic{width:34px;height:34px;border-radius:10px;display:grid;place-items:center;color:#fff;flex:0 0 auto}
+  .float-tag small{display:block;font-weight:500;font-size:.74rem;color:var(--muted);letter-spacing:0}
+  .ft-1{top:22px;left:-18px;animation:floaty 6s ease-in-out infinite}
+  .ft-2{bottom:24px;right:-16px;animation:floaty 6s ease-in-out infinite .8s}
+  @keyframes floaty{50%{transform:translateY(-9px)}}
+
+  .wave{display:block;width:100%;height:auto;margin-top:64px}
+  .wave .w-move{animation:drift 14s linear infinite}
+  @keyframes drift{to{transform:translateX(-260px)}}
+
+  /* ---------- Section shells ---------- */
+  section{position:relative}
+  .sec{padding:88px 0}
+  .sec-head{max-width:680px;margin:0 auto 50px;text-align:center}
+  .sec-head h2{font-size:clamp(1.9rem,3.4vw,2.9rem);margin:16px 0 14px}
+  .sec-head p{color:var(--muted);font-size:1.08rem}
+  .sec-head .eyebrow{justify-content:center}
+
+  /* ---------- Services ---------- */
+  .services{background:linear-gradient(180deg,#fff, var(--paper))}
+  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:30px 28px;box-shadow:var(--shadow-sm);transition:transform .3s var(--ease),box-shadow .3s var(--ease),border-color .3s var(--ease);position:relative;overflow:hidden}
+  .card::after{content:"";position:absolute;left:0;top:0;height:3px;width:0;background:var(--grad);transition:width .4s var(--ease)}
+  .card:hover{transform:translateY(-6px);box-shadow:var(--shadow);border-color:transparent}
+  .card:hover::after{width:100%}
+  .card-ic{width:56px;height:56px;border-radius:16px;display:grid;place-items:center;margin-bottom:20px;background:var(--grad-soft);color:var(--blue)}
+  .card-ic svg{width:28px;height:28px}
+  .card h3{font-size:1.28rem;margin-bottom:10px}
+  .card p{color:var(--muted);font-size:.97rem}
+  .card.feature{background:var(--grad);color:#fff;border:0}
+  .card.feature .card-ic{background:rgba(255,255,255,.16);color:#fff}
+  .card.feature h3,.card.feature p{color:#fff}
+  .card.feature p{opacity:.92}
+  .card.feature .tagpill{display:inline-flex;align-items:center;gap:7px;background:rgba(255,255,255,.16);padding:5px 12px;border-radius:999px;font-size:.76rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;margin-bottom:18px}
+  .card.feature::after{display:none}
+  .card.feature:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg)}
+
+  /* ---------- Showcase (real photos) ---------- */
+  .showcase{background:var(--paper)}
+  .showcase-grid{display:grid;grid-template-columns:1.25fr .9fr;gap:22px}
+  .photo-card{position:relative;border-radius:24px;overflow:hidden;box-shadow:var(--shadow);border:1px solid var(--line);height:clamp(340px,42vw,520px)}
+  .photo-card img{width:100%;height:100%;object-fit:cover;transition:transform .7s var(--ease)}
+  .photo-card:hover img{transform:scale(1.045)}
+  .photo-card figcaption{position:absolute;left:0;right:0;bottom:0;padding:24px;color:#fff;font-weight:700;font-size:1.12rem;background:linear-gradient(transparent, rgba(8,24,52,.86));font-family:'Bricolage Grotesque',sans-serif}
+  .photo-card figcaption small{display:block;font-weight:500;font-size:.86rem;opacity:.9;margin-top:4px;font-family:'Inter',sans-serif}
+  .photo-card .badge-float{position:absolute;top:16px;left:16px;background:rgba(255,255,255,.95);color:var(--green-deep);font-size:.74rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:6px 13px;border-radius:999px;box-shadow:var(--shadow-sm)}
+
+  /* ---------- Why choose us ---------- */
+  .why{background:#fff}
+  .why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  .why-item{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius-sm);padding:26px;display:flex;gap:16px;align-items:flex-start;box-shadow:var(--shadow-sm);transition:transform .25s var(--ease)}
+  .why-item:hover{transform:translateY(-4px)}
+  .why-ic{width:46px;height:46px;border-radius:12px;flex:0 0 auto;display:grid;place-items:center;color:#fff;background:var(--grad)}
+  .why-ic svg{width:23px;height:23px}
+  .why-item h3{font-size:1.08rem;margin-bottom:5px}
+  .why-item p{font-size:.93rem;color:var(--muted)}
+
+  /* ---------- Emergency ---------- */
+  .emergency{padding:0 0 88px}
+  .emergency-inner{position:relative;overflow:hidden;border-radius:30px;color:#fff;background:radial-gradient(120% 140% at 85% 0%, #2C6A6E 0%, transparent 55%), var(--blue-night);padding:clamp(36px,5vw,64px);box-shadow:var(--shadow-lg)}
+  .emergency-inner::before{content:"";position:absolute;right:-60px;bottom:-60px;width:280px;height:280px;border-radius:50%;border:2px solid rgba(94,163,218,.2)}
+  .emergency-inner::after{content:"";position:absolute;right:10px;bottom:10px;width:160px;height:160px;border-radius:50%;border:2px solid rgba(94,163,218,.16)}
+  .emergency-grid{display:grid;grid-template-columns:1.4fr 1fr;gap:40px;align-items:center;position:relative;z-index:2}
+  .emergency h2{font-size:clamp(1.8rem,3.3vw,2.7rem);margin:14px 0 14px}
+  .emergency p{color:#C9DAF0;font-size:1.06rem;max-width:520px}
+  .emergency-call{text-align:center;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.16);border-radius:20px;padding:30px}
+  .emergency-call small{letter-spacing:.14em;text-transform:uppercase;font-size:.74rem;font-weight:600;color:#9ED0F0}
+  .emergency-call .num{font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:clamp(1.6rem,3vw,2.2rem);margin:8px 0 18px;color:#fff}
+  .badge-amber{display:inline-flex;align-items:center;gap:8px;background:rgba(240,164,30,.16);color:#F6C667;border:1px solid rgba(240,164,30,.3);padding:7px 15px;border-radius:999px;font-size:.83rem;font-weight:600}
+
+  /* ---------- Service area ---------- */
+  .area{background:linear-gradient(180deg,var(--paper),#fff)}
+  .area-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+  .area h2{font-size:clamp(1.9rem,3.4vw,2.8rem);margin:16px 0 16px}
+  .area p{color:var(--muted);font-size:1.06rem;margin-bottom:24px}
+  .towns{display:flex;flex-wrap:wrap;gap:10px}
+  .town{background:#fff;border:1px solid var(--line);border-radius:999px;padding:9px 17px;font-weight:500;font-size:.92rem;display:flex;align-items:center;gap:8px;box-shadow:var(--shadow-sm)}
+  .town svg{width:15px;height:15px;color:var(--green)}
+  .area-map{position:relative;border-radius:26px;overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow);background:radial-gradient(60% 60% at 50% 45%, rgba(94,163,218,.16), transparent 70%), var(--grad-soft);aspect-ratio:4/3.4;display:grid;place-items:center}
+  .area-map .pin{position:absolute;display:flex;flex-direction:column;align-items:center;gap:4px;font-size:.72rem;font-weight:600;color:var(--blue-deep)}
+  .area-map .pin i{width:16px;height:16px;border-radius:50% 50% 50% 0;background:var(--grad);transform:rotate(-45deg);box-shadow:0 4px 10px rgba(31,78,148,.4)}
+  .area-map .pin.center i{width:22px;height:22px;animation:pinpulse 2.6s ease-in-out infinite}
+  @keyframes pinpulse{50%{transform:rotate(-45deg) scale(1.12)}}
+
+  /* ---------- Contact ---------- */
+  .contact{background:#fff}
+  .contact-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:36px;align-items:start}
+  .form-card{background:var(--paper);border:1px solid var(--line);border-radius:26px;padding:clamp(26px,3.6vw,40px);box-shadow:var(--shadow-sm)}
+  .form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  .form-row>*{min-width:0}
+  .field{margin-bottom:16px;display:flex;flex-direction:column;gap:7px;min-width:0}
+  .field label{font-size:.85rem;font-weight:600;color:var(--ink)}
+  .field label .req{color:#D7541F}
+  .field input,.field select,.field textarea{font-family:inherit;font-size:.98rem;color:var(--ink);padding:13px 15px;border:1.5px solid var(--line);border-radius:12px;background:#fff;transition:border-color .2s,box-shadow .2s;width:100%}
+  .field textarea{resize:vertical;min-height:108px}
+  .field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--blue);box-shadow:0 0 0 4px rgba(31,78,148,.12)}
+  .form-card .btn{width:100%;margin-top:6px}
+  .form-note{font-size:.82rem;color:var(--muted);text-align:center;margin-top:14px}
+  .form-success{display:none;text-align:center;padding:30px 10px}
+  .form-success.show{display:block}
+  .form-success .check{width:64px;height:64px;border-radius:50%;background:var(--grad);display:grid;place-items:center;margin:0 auto 18px;color:#fff}
+  .form-success h3{font-size:1.4rem;margin-bottom:8px}
+  .form-success p{color:var(--muted)}
+  .contact-side{display:flex;flex-direction:column;gap:18px}
+  .info-card{border-radius:22px;padding:28px;color:#fff;background:var(--grad);box-shadow:var(--shadow)}
+  .info-card h3{font-size:1.3rem;margin-bottom:6px}
+  .info-card p{opacity:.9;font-size:.95rem;margin-bottom:20px}
+  .info-line{display:flex;align-items:center;gap:14px;padding:13px 0;border-top:1px solid rgba(255,255,255,.18)}
+  .info-line .ic{width:42px;height:42px;border-radius:12px;background:rgba(255,255,255,.16);display:grid;place-items:center;flex:0 0 auto}
+  .info-line .ic svg{width:20px;height:20px}
+  .info-line b{font-size:1.02rem}
+  .info-line small{display:block;opacity:.82;font-size:.8rem;font-weight:500}
+  .hours-card{background:var(--paper);border:1px solid var(--line);border-radius:22px;padding:24px 26px}
+  .hours-card h4{font-size:1rem;margin-bottom:14px;display:flex;align-items:center;gap:9px}
+  .hours-card h4 svg{width:18px;height:18px;color:var(--green)}
+  .hours-row{display:flex;justify-content:space-between;font-size:.92rem;padding:6px 0;color:var(--muted)}
+  .hours-row b{color:var(--ink);font-weight:600}
+  .hours-row.em b{color:var(--green-deep)}
+
+  /* ---------- Footer ---------- */
+  footer{background:var(--blue-night);color:#C5D3E6;padding:64px 0 26px;position:relative}
+  .footer-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:40px;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,.1)}
+  .footer-brand .brand-chip{width:60px;height:60px}
+  .footer-brand p{margin-top:18px;font-size:.95rem;max-width:330px;line-height:1.7}
+  footer h4{color:#fff;font-size:.82rem;letter-spacing:.14em;text-transform:uppercase;margin-bottom:18px;font-family:'Inter',sans-serif;font-weight:700}
+  .footer-col a,.footer-col p{display:block;color:#C5D3E6;font-size:.95rem;padding:5px 0;transition:color .2s}
+  .footer-col a:hover{color:#fff}
+  .footer-bottom{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:14px;padding-top:24px;font-size:.86rem;color:#8FA3BE}
+  .footer-bottom a{color:#8FA3BE}
+  .footer-bottom a:hover{color:#fff}
+  .to-top{width:42px;height:42px;border-radius:12px;background:rgba(255,255,255,.1);display:grid;place-items:center;color:#fff;transition:.25s}
+  .to-top:hover{background:var(--green)}
+
+  .call-bar{position:fixed;left:0;right:0;bottom:0;z-index:50;display:none;background:#fff;border-top:1px solid var(--line);padding:10px 14px;gap:10px;box-shadow:0 -8px 24px -12px rgba(0,0,0,.25)}
+  .call-bar .btn{flex:1}
+
+  .reveal{opacity:0;transform:translateY(26px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
+  .reveal.in{opacity:1;transform:none}
+
+  /* ---------- Responsive ---------- */
+  @media (max-width:980px){
+    .hero-grid{grid-template-columns:1fr;gap:40px}
+    .hero-visual{max-width:520px;margin:0 auto;width:100%}
+    .cards{grid-template-columns:repeat(2,1fr)}
+    .showcase-grid{grid-template-columns:1fr}
+    .photo-card{height:clamp(280px,60vw,400px)}
+    .why-grid{grid-template-columns:repeat(2,1fr)}
+    .emergency-grid{grid-template-columns:1fr;gap:28px}
+    .area-grid{grid-template-columns:1fr;gap:34px}
+    .contact-grid{grid-template-columns:1fr}
+    .footer-grid{grid-template-columns:1fr 1fr}
+  }
+  @media (max-width:680px){
+    .nav-links,.nav-cta .btn{display:none}
+    .hamburger{display:flex}
+    .hero{padding-top:118px}
+    .sec{padding:62px 0}
+    .emergency{padding-bottom:62px}
+    .cards{grid-template-columns:1fr}
+    .why-grid{grid-template-columns:1fr}
+    .form-row{grid-template-columns:1fr}
+    .footer-grid{grid-template-columns:1fr;gap:30px}
+    .hero-trust{gap:8px 18px}
+    .ft-1{left:-6px}.ft-2{right:-4px}
+    .call-bar{display:flex}
+    body{padding-bottom:70px}
+    footer{padding-bottom:90px}
+  }
+  @media (prefers-reduced-motion:reduce){
+    *{animation:none!important;scroll-behavior:auto}
+    .reveal{opacity:1;transform:none;transition:none}
+  }
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header id="header">
+  <div class="wrap nav">
+    <a class="brand" href="#top" aria-label="Go With The Flow Water Delivery home">
+      <span class="brand-chip"><img src="assets/logo.png" alt="Go With The Flow Water Delivery logo" /></span>
+      <span class="brand-name"><b>Go With The Flow</b><span>Water Delivery</span></span>
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="#services">Services</a>
+      <a href="#why">Why Choose Us</a>
+      <a href="#area">Service Area</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="btn" href="#contact">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C8 7 6 11 6 14a6 6 0 0 0 12 0c0-3-2-7-6-12Z"/></svg>
+        Request Water Delivery
+      </a>
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<!-- MOBILE MENU -->
+<div class="overlay" id="overlay"></div>
+<nav class="mobile-menu" id="mobileMenu" aria-label="Mobile">
+  <a href="#services">Services</a>
+  <a href="#why">Why Choose Us</a>
+  <a href="#area">Service Area</a>
+  <a href="#contact">Contact</a>
+  <a class="btn" href="#contact">Request Water Delivery</a>
+  <a class="btn btn-amber" href="tel:+19022121296">Call (902) 212-1296</a>
+</nav>
+
+<span id="top"></span>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div class="reveal">
+      <span class="hero-badge"><span class="dot"></span>Locally owned &amp; operated in Lunenburg County</span>
+      <h1>Bulk Water Delivery You Can <span class="flow">Count On</span> in Lunenburg County</h1>
+      <p class="lead">Clean, potable water delivered for cisterns, pools, hot tubs, and wells — serving homes, cottages, farms, and businesses across the South Shore.</p>
+      <div class="hero-cta">
+        <a class="btn btn-lg" href="#contact">Request Water Delivery</a>
+        <a class="btn btn-amber btn-lg" href="tel:+19022121296">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg>
+          Need Water Now? Call Us
+        </a>
+      </div>
+      <div class="hero-trust">
+        <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Clean, potable water</div>
+        <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Scheduled &amp; emergency delivery</div>
+        <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Competitive flat rates</div>
+      </div>
+    </div>
+
+    <div class="hero-visual reveal">
+      <figure class="hero-photo">
+        <img src="assets/truck.jpg" alt="Go With The Flow Water Delivery green Western Star tanker truck on a Nova Scotia road" />
+      </figure>
+      <div class="float-tag ft-1">
+        <span class="ic" style="background:var(--green)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="18"><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 14"/></svg></span>
+        <span>On-time, every time<small>Scheduled deliveries</small></span>
+      </div>
+      <div class="float-tag ft-2">
+        <span class="ic" style="background:var(--blue)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="18"><path d="M12 2C8 7 6 11 6 14a6 6 0 0 0 12 0c0-3-2-7-6-12Z"/></svg></span>
+        <span>Potable &amp; food-grade<small>Our own tankers</small></span>
+      </div>
+    </div>
+  </div>
+
+  <svg class="wave" viewBox="0 0 1440 110" preserveAspectRatio="none" aria-hidden="true">
+    <path class="w-move" fill="#ffffff" d="M0,60 C180,110 360,10 540,50 C720,90 900,20 1080,55 C1260,90 1380,40 1700,60 L1700,110 L0,110 Z"></path>
+    <path class="w-move" fill="#ffffff" opacity=".7" d="M0,75 C200,40 400,100 600,70 C800,40 1000,100 1200,72 C1400,44 1500,80 1700,70 L1700,110 L0,110 Z"></path>
+  </svg>
+</section>
+
+<!-- SERVICES -->
+<section class="sec services" id="services">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">What we deliver</span>
+      <h2>Water delivery for every job, big or small</h2>
+      <p>One trusted local crew for all your bulk water needs — clean, careful, and always on schedule.</p>
+    </div>
+    <div class="cards">
+      <article class="card reveal">
+        <div class="card-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M5 8h14v11a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2Z"/><path d="M4 8 12 3l8 5"/><path d="M9 14h6"/></svg></div>
+        <h3>Cistern Filling</h3>
+        <p>Keep your cistern topped up year-round. We deliver the volume you need and fill carefully, so you never run dry between visits.</p>
+      </article>
+      <article class="card reveal">
+        <div class="card-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M3 16c2-2 4-2 6 0s4 2 6 0 4-2 6 0"/><path d="M3 20c2-2 4-2 6 0s4 2 6 0 4-2 6 0"/><rect x="5" y="4" width="14" height="8" rx="2"/></svg></div>
+        <h3>Pool Filling</h3>
+        <p>Skip the slow garden hose. We fill new pools and top up existing ones fast, so you can get back to swimming the same day.</p>
+      </article>
+      <article class="card reveal">
+        <div class="card-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="13" r="7"/><path d="M9 11c1-1.5 2 .5 3-1M12 6V3"/><path d="M9.5 13.5c.8.8 4.2.8 5 0"/></svg></div>
+        <h3>Hot Tub Filling</h3>
+        <p>A fresh, clean fill for hot tubs and spas — ready to heat and enjoy. Perfect after a drain-and-clean or a brand-new install.</p>
+      </article>
+      <article class="card reveal">
+        <div class="card-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M5 21h14"/><path d="M7 21V8a5 5 0 0 1 10 0v13"/><path d="M9 8h6"/><path d="M12 11v6"/></svg></div>
+        <h3>Well Filling</h3>
+        <p>Low or dry well? We deliver clean water straight to your well or holding tank to bridge the gap until your supply recovers.</p>
+      </article>
+      <article class="card feature reveal">
+        <span class="tagpill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" width="13" height="13"><path d="M13 2 3 14h7l-1 8 11-13h-8Z"/></svg>24/7 priority</span>
+        <div class="card-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M3 13h13v5H3z"/><path d="M16 8h3l3 4v6h-3"/><circle cx="7" cy="18" r="2"/><circle cx="18" cy="18" r="2"/></svg></div>
+        <h3>Emergency After-Hours Delivery</h3>
+        <p>Run out unexpectedly? When available, we deliver after hours and on weekends so you're never left without water when it matters most.</p>
+      </article>
+      <article class="card reveal" style="display:flex;flex-direction:column;justify-content:center;background:var(--grad-soft);border-color:transparent">
+        <h3 style="font-size:1.35rem">Not sure what you need?</h3>
+        <p style="margin:8px 0 18px">Tell us your tank, pool, or situation and we'll recommend the right delivery — no guesswork.</p>
+        <a class="btn" href="#contact" style="align-self:flex-start">Get a quick quote</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- SHOWCASE -->
+<section class="sec showcase">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">On the job</span>
+      <h2>Real trucks. Real local service.</h2>
+      <p>Clearly marked, food-grade tankers delivering clean potable water right across Lunenburg County.</p>
+    </div>
+    <div class="showcase-grid">
+      <figure class="photo-card reveal">
+        <span class="badge-float">Pool fills</span>
+        <img src="assets/pool-fill.jpg" alt="Clean water being delivered into an above-ground pool with a country view" />
+        <figcaption>Pools filled fast<small>From garden-hose slow to swim-ready the same day.</small></figcaption>
+      </figure>
+      <figure class="photo-card reveal">
+        <span class="badge-float">Potable water</span>
+        <img src="assets/tanker.jpg" alt="Go With The Flow Water stainless tanker delivering potable water through a green hose" />
+        <figcaption>Clearly marked, food-grade<small>Potable water, delivered the right way.</small></figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- WHY CHOOSE US -->
+<section class="sec why" id="why">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Why choose us</span>
+      <h2>Local crew, dependable service</h2>
+      <p>We're your neighbours on the South Shore — and we treat every delivery like it's our own.</p>
+    </div>
+    <div class="why-grid">
+      <div class="why-item reveal">
+        <span class="why-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C8 7 6 11 6 14a6 6 0 0 0 12 0c0-3-2-7-6-12Z"/><path d="M9 14h6"/></svg></span>
+        <div><h3>Local Lunenburg County service</h3><p>Based right here on the South Shore, with roads and back-lanes we already know well.</p></div>
+      </div>
+      <div class="why-item reveal">
+        <span class="why-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/><path d="m9 15 2 2 4-4"/></svg></span>
+        <div><h3>Reliable scheduled deliveries</h3><p>Set a regular fill-up schedule and stop worrying — we show up when we say we will.</p></div>
+      </div>
+      <div class="why-item reveal">
+        <span class="why-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 14"/></svg></span>
+        <div><h3>Emergency after-hours availability</h3><p>When you run out unexpectedly, call us — we deliver after hours whenever we can.</p></div>
+      </div>
+      <div class="why-item reveal">
+        <span class="why-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></span>
+        <div><h3>Competitive rates</h3><p>Fair, upfront pricing with no surprises — quality water delivery that fits your budget.</p></div>
+      </div>
+      <div class="why-item reveal">
+        <span class="why-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 9a2 2 0 0 1-2 2H6l-4 4V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2Z"/><path d="M18 9h2a2 2 0 0 1 2 2v11l-4-4h-6a2 2 0 0 1-2-2v-1"/></svg></span>
+        <div><h3>Friendly, dependable service</h3><p>Courteous drivers, careful fills, and real people who answer the phone.</p></div>
+      </div>
+      <div class="why-item reveal">
+        <span class="why-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 11 3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></span>
+        <div><h3>Clean, simple booking</h3><p>Request a delivery in under a minute. Pick a date, tell us the location, done.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EMERGENCY -->
+<section class="emergency">
+  <div class="wrap">
+    <div class="emergency-inner reveal">
+      <div class="emergency-grid">
+        <div>
+          <span class="badge-amber">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" width="15" height="15"><path d="M13 2 3 14h7l-1 8 11-13h-8Z"/></svg>
+            After-hours emergency delivery
+          </span>
+          <h2>Out of water? We'll get you flowing again — fast.</h2>
+          <p>Empty cistern before a long weekend? Dry well with company on the way? Call us. When availability allows, our crew delivers after hours, weekends, and holidays so you're never stuck without water.</p>
+        </div>
+        <div class="emergency-call">
+          <small>Emergency line</small>
+          <div class="num">(902) 212-1296</div>
+          <a class="btn btn-amber btn-lg" href="tel:+19022121296" style="width:100%">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg>
+            Call now
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICE AREA -->
+<section class="sec area" id="area">
+  <div class="wrap area-grid">
+    <div class="reveal">
+      <span class="eyebrow">Service area</span>
+      <h2>Proudly serving Lunenburg County</h2>
+      <p>From the harbour towns to the back roads, we deliver across Lunenburg County and the surrounding South Shore communities. If you're nearby and not listed, just ask — we likely cover you too.</p>
+      <div class="towns">
+        <span class="town"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2C8 7 6 11 6 14a6 6 0 0 0 12 0c0-3-2-7-6-12Z"/></svg>Bridgewater</span>
+        <span class="town"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2C8 7 6 11 6 14a6 6 0 0 0 12 0c0-3-2-7-6-12Z"/></svg>Lunenburg</span>
+        <span class="town"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2C8 7 6 11 6 14a6 6 0 0 0 12 0c0-3-2-7-6-12Z"/></svg>Mahone Bay</span>
+        <span class="town"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2C8 7 6 11 6 14a6 6 0 0 0 12 0c0-3-2-7-6-12Z"/></svg>Chester</span>
+        <span class="town"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2C8 7 6 11 6 14a6 6 0 0 0 12 0c0-3-2-7-6-12Z"/></svg>New Germany</span>
+        <span class="town"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2C8 7 6 11 6 14a6 6 0 0 0 12 0c0-3-2-7-6-12Z"/></svg>Blockhouse</span>
+        <span class="town"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2C8 7 6 11 6 14a6 6 0 0 0 12 0c0-3-2-7-6-12Z"/></svg>Western Shore</span>
+        <span class="town"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2C8 7 6 11 6 14a6 6 0 0 0 12 0c0-3-2-7-6-12Z"/></svg>Hebbville</span>
+        <span class="town" style="background:var(--grad-soft);font-weight:600">+ surrounding areas</span>
+      </div>
+    </div>
+    <div class="area-map reveal" role="img" aria-label="Stylized map showing service coverage across Lunenburg County">
+      <span class="pin center" style="top:46%;left:48%"><i></i>Bridgewater</span>
+      <span class="pin" style="top:26%;left:24%"><i></i>New Germany</span>
+      <span class="pin" style="top:62%;left:28%"><i></i>Lunenburg</span>
+      <span class="pin" style="top:30%;left:70%"><i></i>Chester</span>
+      <span class="pin" style="top:68%;left:66%"><i></i>Mahone Bay</span>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="sec contact" id="contact">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Get in touch</span>
+      <h2>Request your water delivery</h2>
+      <p>Fill out the form and we'll get right back to you with a time and a price. Need it urgently? Give us a call.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="form-card reveal">
+        <form id="leadForm" novalidate>
+          <div class="form-row">
+            <div class="field">
+              <label for="name">Name <span class="req">*</span></label>
+              <input id="name" name="name" type="text" placeholder="Your full name" required />
+            </div>
+            <div class="field">
+              <label for="phone">Phone number <span class="req">*</span></label>
+              <input id="phone" name="phone" type="tel" placeholder="(902) 000-0000" required />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="field">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" placeholder="you@example.com" />
+            </div>
+            <div class="field">
+              <label for="date">Preferred delivery date</label>
+              <input id="date" name="date" type="date" />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="field">
+              <label for="location">Delivery location <span class="req">*</span></label>
+              <input id="location" name="location" type="text" placeholder="Street, town in Lunenburg County" required />
+            </div>
+            <div class="field">
+              <label for="type">Type of delivery <span class="req">*</span></label>
+              <select id="type" name="type" required>
+                <option value="" disabled selected>Choose one…</option>
+                <option>Cistern filling</option>
+                <option>Pool filling</option>
+                <option>Hot tub filling</option>
+                <option>Well filling</option>
+                <option>Emergency / after-hours</option>
+                <option>Not sure — need advice</option>
+              </select>
+            </div>
+          </div>
+          <div class="field">
+            <label for="message">Message / details</label>
+            <textarea id="message" name="message" placeholder="Tank size, access notes, how soon you need it, anything else…"></textarea>
+          </div>
+          <button type="submit" class="btn btn-lg">Send my request</button>
+          <p class="form-note">We typically reply the same day. Prefer to talk? Call <a href="tel:+19022121296" style="color:var(--blue);font-weight:600">(902) 212-1296</a>.</p>
+        </form>
+        <div class="form-success" id="formSuccess">
+          <div class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" width="30"><polyline points="20 6 9 17 4 12"/></svg></div>
+          <h3>Request received — thank you!</h3>
+          <p>We've got your details and will be in touch shortly to confirm timing and pricing. For urgent needs, call <b>(902) 212-1296</b>.</p>
+        </div>
+      </div>
+
+      <aside class="contact-side reveal">
+        <div class="info-card">
+          <h3>Talk to a real person</h3>
+          <p>No call centres, no runaround — just your local water delivery crew.</p>
+          <a class="info-line" href="tel:+19022121296" style="color:#fff">
+            <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg></span>
+            <span><b>(902) 212-1296</b><small>Call or text — scheduled &amp; emergency</small></span>
+          </a>
+          <a class="info-line" href="mailto:dispatch@gowiththeflowwater.ca" style="color:#fff">
+            <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg></span>
+            <span><b>dispatch@gowiththeflowwater.ca</b><small>Email us anytime</small></span>
+          </a>
+          <div class="info-line">
+            <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C8 7 6 11 6 14a6 6 0 0 0 12 0c0-3-2-7-6-12Z"/></svg></span>
+            <span><b>Lunenburg County, NS</b><small>&amp; surrounding South Shore</small></span>
+          </div>
+        </div>
+        <div class="hours-card">
+          <h4><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 14"/></svg>Hours</h4>
+          <div class="hours-row"><span>Monday – Friday</span><b>7:00 AM – 6:00 PM</b></div>
+          <div class="hours-row"><span>Saturday</span><b>8:00 AM – 4:00 PM</b></div>
+          <div class="hours-row"><span>Sunday</span><b>By appointment</b></div>
+          <div class="hours-row em"><span>After hours</span><b>Emergency only</b></div>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="#top">
+          <span class="brand-chip"><img src="assets/logo.png" alt="Go With The Flow Water Delivery logo" /></span>
+          <span class="brand-name"><b style="color:#fff">Go With The Flow</b><span style="color:#9ED0F0">Water Delivery</span></span>
+        </a>
+        <p>Serving Lunenburg County with clean, potable bulk water delivery you can trust — cisterns, pools, hot tubs, and wells, at competitive rates with scheduled and emergency service.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <a href="#services">Cistern filling</a>
+        <a href="#services">Pool filling</a>
+        <a href="#services">Hot tub filling</a>
+        <a href="#services">Well filling</a>
+        <a href="#services">Emergency delivery</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <a href="tel:+19022121296">(902) 212-1296</a>
+        <a href="mailto:dispatch@gowiththeflowwater.ca">dispatch@gowiththeflowwater.ca</a>
+        <p>Lunenburg County, Nova Scotia</p>
+        <p>&amp; surrounding South Shore</p>
+        <a href="#contact">Request a delivery →</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="year"></span> Go With The Flow Water Delivery. All rights reserved.</span>
+      <a href="#top" class="to-top" aria-label="Back to top">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" width="18"><polyline points="18 15 12 9 6 15"/></svg>
+      </a>
+    </div>
+  </div>
+</footer>
+
+<!-- STICKY MOBILE CALL BAR -->
+<div class="call-bar">
+  <a class="btn btn-ghost" href="#contact">Request</a>
+  <a class="btn btn-amber" href="tel:+19022121296">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="17"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg>
+    Call now
+  </a>
+</div>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  const header = document.getElementById('header');
+  const onScroll = () => header.classList.toggle('scrolled', window.scrollY > 24);
+  onScroll(); window.addEventListener('scroll', onScroll, {passive:true});
+
+  const ham = document.getElementById('hamburger');
+  const menu = document.getElementById('mobileMenu');
+  const overlay = document.getElementById('overlay');
+  const toggle = (open) => {
+    menu.classList.toggle('open', open);
+    overlay.classList.toggle('open', open);
+    ham.classList.toggle('open', open);
+    ham.setAttribute('aria-expanded', open);
+    document.body.style.overflow = open ? 'hidden' : '';
+  };
+  ham.addEventListener('click', () => toggle(!menu.classList.contains('open')));
+  overlay.addEventListener('click', () => toggle(false));
+  menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => toggle(false)));
+
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
+  }, {threshold:.12, rootMargin:'0px 0px -40px 0px'});
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+  // Front-end demo. To receive submissions, point this at Formspree, your email,
+  // or a serverless endpoint (see README).
+  const form = document.getElementById('leadForm');
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    if (!form.checkValidity()){ form.reportValidity(); return; }
+    form.style.display = 'none';
+    document.getElementById('formSuccess').classList.add('show');
+    document.getElementById('formSuccess').scrollIntoView({behavior:'smooth', block:'center'});
+  });
+</script>
+</body>
+</html>
